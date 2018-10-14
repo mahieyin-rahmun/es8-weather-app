@@ -4,7 +4,7 @@
   "description": "ES8 version of the weather app with async and await",
   "main": "server.js",
   "scripts": {
-    "start": "opn http://localhost:3000 && node server.js"
+    "start": "node server.js"
   },
   "author": "Mahieyin Rahmun",
   "license": "ISC",
@@ -13,8 +13,5 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "node-fetch": "^2.2.0"
-  },
-  "devDependencies": {
-    "opn-cli": "^3.1.0"
   }
 }
