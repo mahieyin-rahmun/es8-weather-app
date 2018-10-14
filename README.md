@@ -9,3 +9,5 @@ I didn't use **view engines** or **templating engines** because:
 *However, my next projects will surely make use of a templating engine.*
 
 My choice of API is also questionable, but as I said, I just got started with this.
+
+App deployed at https://es8-weather-app-mahieyin.herokuapp.com/ :D
