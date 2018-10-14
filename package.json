@@ -1,0 +1,20 @@
+{
+  "name": "es8-weather",
+  "version": "1.0.0",
+  "description": "ES8 version of the weather app with async and await",
+  "main": "server.js",
+  "scripts": {
+    "start": "opn http://localhost:3000 && node server.js"
+  },
+  "author": "Mahieyin Rahmun",
+  "license": "ISC",
+  "dependencies": {
+    "@gouch/to-title-case": "^2.2.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "opn-cli": "^3.1.0"
+  }
+}

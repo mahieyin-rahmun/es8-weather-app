@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"> </script>
+
+    <!-- Needed for Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <h3>You Wanna Know The Weather?</h3>
+        <input type="text" placeholder="Enter City Name Here...." id="cityName">
+        <div class="input-field col s12">
+            <select id="unit">
+                <option value="" disabled selected>Choose Your Preferred Unit</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Celcius">Celcius</option>
+            </select>
+            <label></label>
+        </div>
+        <br>
+        <a id="submit" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Get Weather</a>
+        <img src="/images/loading.gif" alt="" width="360" height="360" class="giphy-embed">
+        <div id="report"></div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                &COPY; 2018 Mahieyin Rahmun
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // materialize css initialization of the options box
+        $(document).ready(function () {
+            $('select').formSelect();
+            $('#report').css("border", "0");
+        });
+
+        // DOM cache the submit button
+        var submitBtn = $('#submit');
+
+        // listen for click event on the button
+        submitBtn.on('click', () => {
+            getData();
+        });
+        
+        // also for enter key
+        $(document).keypress(function (e) {
+            if (e.which === 13) {
+                getData();
+            }
+        });
+
+        function getData() {
+            // get the name of city and values
+            var city = $('#cityName').val();
+            var unit = $('#unit').val();
+
+            console.log(unit);
+
+            // if either is empty/unselected, return
+            if (city === '' || unit === null) {
+                alert('City or Unit cannot be empty!');
+                return;
+            } else {
+                $('#report').empty();
+                $('#report').css("border", "0");
+                $('.giphy-embed').css("display", "block");  // display the loading gif
+
+                // make an ajax POST request
+                $.ajax({
+                    type: "POST",   // type of request
+                    url: "/",   // request to the '/' route
+                    data: {     // data to be sent to the server
+                        city: city,
+                        unit: unit
+                    },
+                    // after receiving data back from server, do this
+                    success: (response) => {
+                        $('.giphy-embed').css("display", "none");   // hide the loading gif
+                        $('#report').html(response);    // put the sent data in the div block
+                        $('#report').css("border", "2px solid black");      // add some styling to it                        
+                    }
+                });
+            }
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

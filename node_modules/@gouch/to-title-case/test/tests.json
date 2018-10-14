@@ -1,0 +1,226 @@
+{
+  "general": [
+    {
+      "input": "one two",
+      "expect": "One Two"
+    },
+    {
+      "input": "one two three",
+      "expect": "One Two Three"
+    },
+    {
+      "input": "Start a an and as at but by en for if in nor of on or per the to v vs via end",
+      "expect": "Start a an and as at but by en for if in nor of on or per the to v vs via End"
+    },
+    {
+      "input": "a small word starts",
+      "expect": "A Small Word Starts"
+    },
+    {
+      "input": "small word ends on",
+      "expect": "Small Word Ends On"
+    },
+    {
+      "input": "questions?",
+      "expect": "Questions?"
+    },
+    {
+      "input": "Two questions?",
+      "expect": "Two Questions?"
+    },
+    {
+      "input": "one sentence. two sentences.",
+      "expect": "One Sentence. Two Sentences."
+    },
+    {
+      "input": "we keep NASA capitalized",
+      "expect": "We Keep NASA Capitalized"
+    },
+    {
+      "input": "pass camelCase through",
+      "expect": "Pass camelCase Through"
+    }
+  ],
+  "hyphens": [
+    {
+      "input": "this sub-phrase is nice",
+      "expect": "This Sub-Phrase Is Nice"
+    },
+    {
+      "input": "follow step-by-step instructions",
+      "expect": "Follow Step-by-Step Instructions"
+    },
+    {
+      "input": "easy as one-two-three end",
+      "expect": "Easy as One-Two-Three End"
+    },
+    {
+      "input": "start on-demand end",
+      "expect": "Start On-Demand End"
+    },
+    {
+      "input": "start in-or-out end",
+      "expect": "Start In-or-Out End"
+    },
+    {
+      "input": "start e-commerce end",
+      "expect": "Start E-Commerce End"
+    },
+    {
+      "input": "start e-mail end",
+      "expect": "Start E-Mail End"
+    }
+  ],
+  "punctuation": [
+    {
+      "input": "your hair[cut] looks (nice)",
+      "expect": "Your Hair[cut] Looks (Nice)"
+    },
+    {
+      "input": "keep that colo(u)r",
+      "expect": "Keep That Colo(u)r"
+    },
+    {
+      "input": "leave Q&A unscathed",
+      "expect": "Leave Q&A Unscathed"
+    },
+    {
+      "input": "piña colada while you listen to ænima",
+      "expect": "Piña Colada While You Listen to Ænima"
+    },
+    {
+      "input": "start title – end title",
+      "expect": "Start Title – End Title"
+    },
+    {
+      "input": "start title–end title",
+      "expect": "Start Title–End Title"
+    },
+    {
+      "input": "start title — end title",
+      "expect": "Start Title — End Title"
+    },
+    {
+      "input": "start title—end title",
+      "expect": "Start Title—End Title"
+    },
+    {
+      "input": "start title - end title",
+      "expect": "Start Title - End Title"
+    }
+  ],
+  "quotes": [
+    {
+      "input": "don't break",
+      "expect": "Don't Break"
+    },
+    {
+      "input": "\"double quotes\"",
+      "expect": "\"Double Quotes\""
+    },
+    {
+      "input": "double quotes \"inner\" word",
+      "expect": "Double Quotes \"Inner\" Word"
+    },
+    {
+      "input": "fancy double quotes “inner” word",
+      "expect": "Fancy Double Quotes “Inner” Word"
+    },
+    {
+      "input": "'single quotes'",
+      "expect": "'Single Quotes'"
+    },
+    {
+      "input": "single quotes 'inner' word",
+      "expect": "Single Quotes 'Inner' Word"
+    },
+    {
+      "input": "fancy single quotes ‘inner’ word",
+      "expect": "Fancy Single Quotes ‘Inner’ Word"
+    },
+    {
+      "input": "“‘a twice quoted subtitle’”",
+      "expect": "“‘A Twice Quoted Subtitle’”"
+    },
+    {
+      "input": "have you read “The Lottery”?",
+      "expect": "Have You Read “The Lottery”?"
+    }
+  ],
+  "subtitles": [
+    {
+      "input": "one: two",
+      "expect": "One: Two"
+    },
+    {
+      "input": "one two: three four",
+      "expect": "One Two: Three Four"
+    },
+    {
+      "input": "one two: \"Three Four\"",
+      "expect": "One Two: \"Three Four\""
+    },
+    {
+      "input": "one on: an end",
+      "expect": "One On: An End"
+    },
+    {
+      "input": "one on: \"an end\"",
+      "expect": "One On: \"An End\""
+    }
+  ],
+  "technical": [
+    {
+      "input": "email email@example.com address",
+      "expect": "Email email@example.com Address"
+    },
+    {
+      "input": "you have an https://example.com/ title",
+      "expect": "You Have an https://example.com/ Title"
+    },
+    {
+      "input": "_underscores around words_",
+      "expect": "_Underscores Around Words_"
+    },
+    {
+      "input": "*asterisks around words*",
+      "expect": "*Asterisks Around Words*"
+    }
+  ],
+  "versus": [
+    {
+      "input": "this vs. that",
+      "expect": "This vs. That"
+    },
+    {
+      "input": "this vs that",
+      "expect": "This vs That"
+    },
+    {
+      "input": "this v. that",
+      "expect": "This v. That"
+    },
+    {
+      "input": "this v that",
+      "expect": "This v That"
+    }
+  ],
+  "miscellaneous": [
+    {
+      "input": "",
+      "expect": ""
+    },
+    {
+      "input": "Scott Moritz and TheStreet.com’s million iPhone la-la land",
+      "expect": "Scott Moritz and TheStreet.com’s Million iPhone La-La Land"
+    },
+    {
+      "input": "Notes and observations regarding Apple’s announcements from ‘The Beat Goes On’ special event",
+      "expect": "Notes and Observations Regarding Apple’s Announcements From ‘The Beat Goes On’ Special Event"
+    },
+    {
+      "input": "2018",
+      "expect": "2018"
+    }
+  ]
+}
