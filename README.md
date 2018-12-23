@@ -10,4 +10,4 @@ I didn't use **view engines** or **templating engines** because:
 
 My choice of API is also questionable, but as I said, I just got started with this.
 
-App deployed at https://es8-weather-app-mahieyin.herokuapp.com/ :D
+App deployed at https://weather-app-es8.herokuapp.com/ :D
