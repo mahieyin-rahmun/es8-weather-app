@@ -28,7 +28,12 @@ app.get('/', (req, res) => {
 // get data from form and process it to get the weather information
 app.post('/', async (req, res) => {		// async function 
 	var cityName = (req.body.city).toTitleCase();	// get city name
+
+	// preventing html and script injections
+	cityName = cityName.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 	var unit = req.body.unit;	//  get weather preferred unit is Fahrenheit or Celcius
+	
 	try {
 		var result = await gd.fetchData(apiKey, cityName, unit === 'Fahrenheit');	// call geocode.fetchdata() function with the parameters
 		
