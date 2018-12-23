@@ -64,4 +64,9 @@ app.post('/', async (req, res) => {		// async function
 	}
 });
 
+
+app.all('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'error.html'));
+});
+
 app.listen(port, () => console.log(`Listening at port ${port}...`));	// listen at the specified port
