@@ -1,5 +1,6 @@
 var port = process.env.PORT || 3000;	// define the port
 
+require('dotenv').config();
 const path = require('path');
 const bodyParser = require('body-parser');
 require('@gouch/to-title-case');	// required for toTitleCase() function
@@ -17,7 +18,7 @@ app.use(express.static('public'));
 
 const gd = require('./geocode');    // require the geocode.js file
 
-let apiKey = '6525a1bc57473442e15689d14e997b51';    // apikey for the weather app
+let apiKey = process.env.API_KEY;    // apikey for the weather app
 
 // render the index.html file upon a request to the / route
 app.get('/', (req, res) => {
